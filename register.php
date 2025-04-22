@@ -22,14 +22,22 @@
 <body>
 
     <h1>Login</h1>
-    <form>
+    <form method="POST" action="register.php" enctype="multipart/form-data" >
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="username" class="form-label">Pseudo</label>
+            <input type="text" class="form-control" id="username" aria-describedby="username">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="image" class="form-label">Pseudo</label>
+            <input type="file" class="form-control" id="image" aria-describedby="image">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="username">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
         </div>
             <button type="submit" class="btn btn-primary">Submit</button>
     </form>

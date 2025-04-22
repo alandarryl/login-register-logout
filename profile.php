@@ -1,15 +1,8 @@
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+session_start(); // Start the session
 
-        // Here you would typically check the credentials against a database
-        if ($username == "admin" && $password == "password") {
-            echo "<p>Login successful!</p>";
-        } else {
-            echo "<p>Invalid username or password.</p>";
-        }
-    }
+
+
     ?>
 
 <!DOCTYPE html>
@@ -21,18 +14,7 @@
 </head>
 <body>
 
-    <h1>Login</h1>
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+
 
 </body>
 </html>

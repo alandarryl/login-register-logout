@@ -1,14 +1,10 @@
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+session_start(); // Start the session
 
-        // Here you would typically check the credentials against a database
-        if ($username == "admin" && $password == "password") {
-            echo "<p>Login successful!</p>";
-        } else {
-            echo "<p>Invalid username or password.</p>";
-        }
-    }
-    ?>
+// Destroy the session to log out the user
+session_destroy();
+// Redirect to the login page or any other page
+header("Location: login.php");
+exit(); // Ensure no further code is executed after the redirect
+
 
